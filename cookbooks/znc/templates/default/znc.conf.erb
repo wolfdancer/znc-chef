@@ -25,7 +25,6 @@ Version = 1.0
 </Listener>
 
 <User <%= @irc_nick %>>
-  Pass = sha256#29eaec765d7c5a8cb3c3b6a9df4525382c575f8bc4e041c74ce01831a2ce5202#XUXO2.!ykUN:?:GLoN4r#
 	Admin = true
 	AltNick = <%= @irc_nick %>_
 	AppendTimestamp = false
@@ -58,4 +57,9 @@ Version = 1.0
 		Server = chat.freenode.net +6697
 
 	</Network>
+        <Pass password>
+                Hash = 29eaec765d7c5a8cb3c3b6a9df4525382c575f8bc4e041c74ce01831a2ce5202
+                Method = SHA256
+                Salt = XUXO2.!ykUN:?:GLoN4r
+        </Pass>
 </User>
