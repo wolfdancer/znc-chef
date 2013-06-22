@@ -1,5 +1,5 @@
 # --- Install packages we need ---
-package 'znc'
+# package 'znc' -- this should be installed already
 
 #add the unix znc user
 user 'znc' do

@@ -13,6 +13,12 @@ if ! test -f "$chef_binary"; then
         --force-yes -fuy dist-upgrade &&
     # Install Chef
     aptitude install -y chef
+    # Install ZNC
+    apt-get install znc/quantal-backports znc-dbg/quantal-backports \
+        znc-dev/quantal-backports znc-extra/quantal-backports \
+        znc-perl/quantal-backports znc-python/quantal-backports \
+        znc-tcl/quantal-backports \
+        --force-yes -fuy
 fi &&
 
 "$chef_binary" -c solo.rb -j solo.json
